@@ -4,19 +4,32 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 
 const ContactSection = () => {
   const { toast } = useToast();
   const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
-    setTimeout(() => {
+    const form = e.target as HTMLFormElement;
+    const formData = new FormData(form);
+
+    const { error } = await supabase.from("contact_submissions").insert({
+      name: (formData.get("name") as string).trim(),
+      phone: (formData.get("phone") as string).trim(),
+      email: (formData.get("email") as string).trim(),
+      message: (formData.get("message") as string).trim(),
+    });
+
+    if (error) {
+      toast({ title: "Error", description: "Something went wrong. Please try again.", variant: "destructive" });
+    } else {
       toast({ title: "Message sent!", description: "We'll get back to you within 24 hours." });
-      (e.target as HTMLFormElement).reset();
-      setLoading(false);
-    }, 800);
+      form.reset();
+    }
+    setLoading(false);
   };
 
   return (
@@ -34,10 +47,10 @@ const ContactSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
           {/* Form */}
           <form onSubmit={handleSubmit} className="space-y-5">
-            <Input placeholder="Your Name" required className="bg-background border-border" />
-            <Input placeholder="Phone Number" type="tel" required className="bg-background border-border" />
-            <Input placeholder="Email Address" type="email" required className="bg-background border-border" />
-            <Textarea placeholder="Your Message" rows={4} required className="bg-background border-border resize-none" />
+            <Input name="name" placeholder="Your Name" required className="bg-background border-border" />
+            <Input name="phone" placeholder="Phone Number" type="tel" required className="bg-background border-border" />
+            <Input name="email" placeholder="Email Address" type="email" required className="bg-background border-border" />
+            <Textarea name="message" placeholder="Your Message" rows={4} required className="bg-background border-border resize-none" />
             <Button type="submit" className="w-full gap-2" size="lg" disabled={loading}>
               <Send className="h-4 w-4" />
               {loading ? "Sending..." : "Send Message"}
