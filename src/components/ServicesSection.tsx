@@ -1,4 +1,5 @@
-import { Sun, Bot, CheckCircle2 } from "lucide-react";
+import { Sun, Bot, CheckCircle2, Calculator } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const solarServices = [
   "Energy Audits",
@@ -26,7 +27,7 @@ const ServicesSection = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {/* Solar */}
           <div className="rounded-xl border border-border bg-card p-8 glow-box">
             <div className="flex items-center gap-3 mb-6">
@@ -61,6 +62,25 @@ const ServicesSection = () => {
                 </li>
               ))}
             </ul>
+          </div>
+
+          {/* Audit & Sizing */}
+          <div className="rounded-xl border border-border bg-card p-8 glow-box">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                <Calculator className="h-5 w-5 text-primary" />
+              </div>
+              <h3 className="font-display font-semibold text-xl">Solar System Audit & Sizing</h3>
+            </div>
+            <p className="text-muted-foreground text-sm leading-relaxed mb-6">
+              Get a professional audit of your energy needs. We calculate the right inverter, battery, and panel specifications for your property.
+            </p>
+            <Button className="w-full gap-2" asChild>
+              <a href="https://revoltaudit.my.canva.site/" target="_blank" rel="noopener noreferrer">
+                <Calculator className="h-4 w-4" />
+                Run Free Solar Audit
+              </a>
+            </Button>
           </div>
         </div>
       </div>

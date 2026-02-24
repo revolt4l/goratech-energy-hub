@@ -16,13 +16,13 @@ const HeroSection = () => {
         </div>
 
         <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
-          Reliable Solar &{" "}
-          <span className="text-gradient">AI-Powered</span>{" "}
-          Energy Solutions in Nigeria
+          Solar Installation, System Audit &{" "}
+          <span className="text-gradient">Reliable Power</span>{" "}
+          Solutions in Nigeria
         </h1>
 
         <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-          We design intelligent solar systems and automate energy reporting using AI to help homes and businesses reduce power costs and improve reliability.
+          We design, audit, and install efficient solar systems for homes and businesses.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>

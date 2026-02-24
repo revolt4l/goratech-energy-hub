@@ -16,11 +16,16 @@ const ContactSection = () => {
     const form = e.target as HTMLFormElement;
     const formData = new FormData(form);
 
+    const name = (formData.get("name") as string).trim();
+    const phone = (formData.get("phone") as string).trim();
+    const location = (formData.get("location") as string).trim();
+    const message = (formData.get("message") as string).trim();
+
     const { error } = await supabase.from("contact_submissions").insert({
-      name: (formData.get("name") as string).trim(),
-      phone: (formData.get("phone") as string).trim(),
-      email: (formData.get("email") as string).trim(),
-      message: (formData.get("message") as string).trim(),
+      name,
+      phone,
+      email: "oluwasemiloregoodness@gmail.com",
+      message: `Location: ${location}\n\n${message}`,
     });
 
     if (error) {
@@ -37,10 +42,10 @@ const ContactSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="font-display text-3xl sm:text-4xl font-bold mb-4">
-            Get In <span className="text-gradient">Touch</span>
+            Request a Solar <span className="text-gradient">Quote or Audit</span>
           </h2>
           <p className="text-muted-foreground max-w-lg mx-auto">
-            Ready to switch to solar? Book a free consultation today.
+            Ready to switch to solar? Fill in the form and we'll get back to you within 24 hours.
           </p>
         </div>
 
@@ -49,7 +54,7 @@ const ContactSection = () => {
           <form onSubmit={handleSubmit} className="space-y-5">
             <Input name="name" placeholder="Your Name" required className="bg-background border-border" />
             <Input name="phone" placeholder="Phone Number" type="tel" required className="bg-background border-border" />
-            <Input name="email" placeholder="Email Address" type="email" required className="bg-background border-border" />
+            <Input name="location" placeholder="Your Location" required className="bg-background border-border" />
             <Textarea name="message" placeholder="Your Message" rows={4} required className="bg-background border-border resize-none" />
             <Button type="submit" className="w-full gap-2" size="lg" disabled={loading}>
               <Send className="h-4 w-4" />
