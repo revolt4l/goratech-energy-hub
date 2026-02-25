@@ -1,4 +1,4 @@
-import { ArrowRight, MessageCircle, Calculator } from "lucide-react";
+import { ArrowRight, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroBg from "@/assets/hero-bg.jpg";
 
@@ -16,32 +16,26 @@ const HeroSection = () => {
         </div>
 
         <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
-          Solar, AI, and Digital Technology{" "}
-          <span className="text-gradient">Solutions</span>{" "}
-          for Businesses in Nigeria
+          Powering Businesses with{" "}
+          <span className="text-gradient">Solar Energy</span>{" "}
+          and Smart Digital Solutions
         </h1>
 
         <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-          From solar installation to web design, AI automation, and business support — we power your growth with smart technology.
+          From solar installation to web design, AI automation, and business support — GORATECH Power Hub is your all-in-one technology partner in Nigeria.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
           <Button size="lg" className="gap-2 text-base px-8" asChild>
-            <a href="https://revoltaudit.my.canva.site/" target="_blank" rel="noopener noreferrer">
-              <Calculator className="h-4 w-4" />
-              Run Free Solar Audit
-            </a>
-          </Button>
-          <Button size="lg" variant="outline" className="gap-2 text-base px-8" asChild>
             <a href="#contact">
-              Book a Free Consultation
               <ArrowRight className="h-4 w-4" />
+              Request a Quote
             </a>
           </Button>
           <Button size="lg" variant="outline" className="gap-2 text-base px-8 border-whatsapp/40 text-whatsapp hover:bg-whatsapp/10" asChild>
             <a href="https://wa.me/2348059712276" target="_blank" rel="noopener noreferrer">
               <MessageCircle className="h-4 w-4" />
-              Chat on WhatsApp
+              Contact on WhatsApp
             </a>
           </Button>
         </div>
