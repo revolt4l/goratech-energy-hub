@@ -1,4 +1,4 @@
-import { ArrowRight, MessageCircle } from "lucide-react";
+import { ArrowRight, MessageCircle, Calculator } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroBg from "@/assets/hero-bg.jpg";
 
@@ -25,8 +25,14 @@ const HeroSection = () => {
           From solar installation to web design, AI automation, and business support — GORATECH Power Hub is your all-in-one technology partner in Nigeria.
         </p>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up flex-wrap" style={{ animationDelay: "0.3s" }}>
           <Button size="lg" className="gap-2 text-base px-8" asChild>
+            <a href="https://revoltaudit.my.canva.site/" target="_blank" rel="noopener noreferrer">
+              <Calculator className="h-4 w-4" />
+              Get a Free Energy Audit
+            </a>
+          </Button>
+          <Button size="lg" variant="outline" className="gap-2 text-base px-8" asChild>
             <a href="#contact">
               <ArrowRight className="h-4 w-4" />
               Request a Quote
