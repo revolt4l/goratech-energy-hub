@@ -74,26 +74,6 @@ const ServicesSection = () => {
           ))}
         </div>
 
-        {/* Solar Audit CTA */}
-        <div className="max-w-6xl mx-auto">
-          <div className="rounded-xl border border-border bg-card p-8 glow-box text-center">
-            <div className="flex items-center justify-center gap-3 mb-4">
-              <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                <Calculator className="h-5 w-5 text-primary" />
-              </div>
-              <h3 className="font-display font-semibold text-xl">Free Solar System Audit & Sizing</h3>
-            </div>
-            <p className="text-muted-foreground text-sm leading-relaxed mb-6 max-w-lg mx-auto">
-              Calculate the right inverter, battery, and panel specifications for your property — completely free.
-            </p>
-            <Button className="gap-2" asChild>
-              <a href="https://revoltaudit.my.canva.site/" target="_blank" rel="noopener noreferrer">
-                <Calculator className="h-4 w-4" />
-                Run Free Solar Audit
-              </a>
-            </Button>
-          </div>
-        </div>
       </div>
     </section>
   );
