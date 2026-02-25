@@ -12,17 +12,17 @@ const HeroSection = () => {
       <div className="relative z-10 container mx-auto px-4 text-center max-w-4xl">
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium mb-8 animate-fade-in-up">
           <span className="h-2 w-2 rounded-full bg-primary animate-pulse-glow" />
-          Solar + AI Energy Solutions
+          Solar + AI + Digital Technology Solutions
         </div>
 
         <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
-          Solar Installation, System Audit &{" "}
-          <span className="text-gradient">Reliable Power</span>{" "}
-          Solutions in Nigeria
+          Solar, AI, and Digital Technology{" "}
+          <span className="text-gradient">Solutions</span>{" "}
+          for Businesses in Nigeria
         </h1>
 
         <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-          We design, audit, and install efficient solar systems for homes and businesses.
+          From solar installation to web design, AI automation, and business support — we power your growth with smart technology.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>

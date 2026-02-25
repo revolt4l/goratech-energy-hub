@@ -1,4 +1,4 @@
-import { Shield, Cpu, Sun } from "lucide-react";
+import { Shield, Cpu, Sun, Globe, PenTool, Headphones } from "lucide-react";
 
 const AboutSection = () => {
   return (
@@ -9,15 +9,18 @@ const AboutSection = () => {
             About <span className="text-gradient">GORATECH</span>
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            GORATECH POWER HUB combines Solar Engineering and AI Technology to deliver accurate energy audits, smart system sizing, and scalable power solutions. We don't just install solar — we engineer efficient systems built to last.
+            GORATECH POWER HUB helps businesses across Nigeria with reliable solar energy solutions and digital technology services. From powering your home with solar to building your online presence, automating workflows with AI, and supporting your business operations — we are your all-in-one technology partner.
           </p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-6">
           {[
-            { icon: Sun, title: "Solar Engineering", desc: "Precision-engineered solar systems designed for Nigerian conditions and maximum output." },
-            { icon: Cpu, title: "AI Technology", desc: "Smart automation and AI-powered reporting for intelligent energy management." },
-            { icon: Shield, title: "Built to Last", desc: "Quality components and expert installations backed by data-driven design." },
+            { icon: Sun, title: "Solar & Energy", desc: "Professional solar installation, inverter setup, and energy audits for homes and businesses." },
+            { icon: Cpu, title: "AI & Automation", desc: "AI-powered tools, prompt engineering, and workflow automation to boost efficiency." },
+            { icon: Globe, title: "Web & Digital", desc: "Modern website design, domain setup, and full digital presence management." },
+            { icon: Headphones, title: "Virtual Assistance", desc: "Remote tech support and virtual assistance for your day-to-day business needs." },
+            { icon: PenTool, title: "Design & Branding", desc: "Professional graphic design, branding, and visual identity for your business." },
+            { icon: Shield, title: "Proposals & Docs", desc: "Expert proposal writing, technical documentation, and professional business reports." },
           ].map((item) => (
             <div key={item.title} className="p-6 rounded-xl bg-card border border-border hover:border-primary/30 transition-colors group">
               <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">

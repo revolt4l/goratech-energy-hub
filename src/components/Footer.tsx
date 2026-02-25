@@ -9,7 +9,7 @@ const Footer = () => {
           <span className="text-foreground">GORATECH</span>
           <span className="text-primary">POWER HUB</span>
         </a>
-        <p className="text-muted-foreground text-sm mb-4">Engineering Intelligent Energy Systems with AI</p>
+        <p className="text-muted-foreground text-sm mb-4">Solar, AI & Digital Technology Solutions in Nigeria</p>
         <p className="text-muted-foreground/60 text-xs">© 2026 GORATECH POWER HUB. All Rights Reserved.</p>
       </div>
     </footer>

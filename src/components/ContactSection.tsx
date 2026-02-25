@@ -42,10 +42,10 @@ const ContactSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="font-display text-3xl sm:text-4xl font-bold mb-4">
-            Request a Solar <span className="text-gradient">Quote or Audit</span>
+            Get in <span className="text-gradient">Touch</span>
           </h2>
           <p className="text-muted-foreground max-w-lg mx-auto">
-            Ready to switch to solar? Fill in the form and we'll get back to you within 24 hours.
+            Need solar, web design, AI solutions, or business support? Reach out and we'll get back to you within 24 hours.
           </p>
         </div>
 
