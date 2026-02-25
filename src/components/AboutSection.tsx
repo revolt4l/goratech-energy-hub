@@ -9,7 +9,7 @@ const AboutSection = () => {
             About <span className="text-gradient">GORATECH</span>
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            GORATECH POWER HUB helps businesses across Nigeria with reliable solar energy solutions and digital technology services. From powering your home with solar to building your online presence, automating workflows with AI, and supporting your business operations — we are your all-in-one technology partner.
+            GORATECH Power Hub is a trusted Solar, AI, and Digital Technology Solutions provider based in Nigeria. We help homes and businesses harness reliable solar energy, build a powerful online presence, automate workflows with AI, and streamline operations — all under one roof.
           </p>
         </div>
 
