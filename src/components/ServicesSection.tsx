@@ -1,4 +1,4 @@
-import { Sun, Bot, Globe, Headphones, FileText, Palette, CheckCircle2, Calculator } from "lucide-react";
+import { Sun, Bot, Globe, Headphones, FileText, Palette, CheckCircle2, ShieldCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const services = [
@@ -72,6 +72,26 @@ const ServicesSection = () => {
               </ul>
             </div>
           ))}
+        </div>
+
+        {/* CAC Registration Card */}
+        <div className="max-w-6xl mx-auto">
+          <div className="rounded-xl border border-border bg-card p-8 glow-box text-center">
+            <div className="flex items-center justify-center gap-3 mb-4">
+              <div className="h-10 w-10 rounded-lg bg-green-500/10 flex items-center justify-center">
+                <ShieldCheck className="h-5 w-5 text-green-500" />
+              </div>
+              <h3 className="font-display font-semibold text-xl">CAC Registration & Certification Issuance</h3>
+            </div>
+            <p className="text-muted-foreground text-sm leading-relaxed mb-6 max-w-lg mx-auto">
+              Register your business with the Corporate Affairs Commission (CAC) and obtain official certification. We handle the entire process so you can focus on growing your business.
+            </p>
+            <Button className="gap-2 bg-green-600 hover:bg-green-700 text-white" asChild>
+              <a href="#contact">
+                Register Now
+              </a>
+            </Button>
+          </div>
         </div>
 
       </div>
