@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
+import { motion } from "framer-motion";
 
 const ContactSection = () => {
   const { toast } = useToast();
@@ -40,18 +41,30 @@ const ContactSection = () => {
   return (
     <section id="contact" className="py-24 bg-card/50">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
           <h2 className="font-display text-3xl sm:text-4xl font-bold mb-4">
             Get in <span className="text-gradient">Touch</span>
           </h2>
           <p className="text-muted-foreground max-w-lg mx-auto">
             Need solar, web design, AI solutions, or business support? Reach out and we'll get back to you within 24 hours.
           </p>
-        </div>
+        </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
-          {/* Form */}
-          <form onSubmit={handleSubmit} className="space-y-5">
+          <motion.form
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.6 }}
+            onSubmit={handleSubmit}
+            className="space-y-5"
+          >
             <Input name="name" placeholder="Your Name" required className="bg-background border-border" />
             <Input name="phone" placeholder="Phone Number" type="tel" required className="bg-background border-border" />
             <Input name="location" placeholder="Your Location" required className="bg-background border-border" />
@@ -60,10 +73,15 @@ const ContactSection = () => {
               <Send className="h-4 w-4" />
               {loading ? "Sending..." : "Send Message"}
             </Button>
-          </form>
+          </motion.form>
 
-          {/* Info */}
-          <div className="space-y-6">
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.6 }}
+            className="space-y-6"
+          >
             <div className="p-6 rounded-xl bg-card border border-border space-y-5">
               <div className="flex items-start gap-4">
                 <Phone className="h-5 w-5 text-primary mt-0.5 shrink-0" />
@@ -101,7 +119,7 @@ const ContactSection = () => {
                 Chat on WhatsApp
               </a>
             </Button>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
