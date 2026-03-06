@@ -1,4 +1,4 @@
-import { Sun, Bot, Globe, Headphones, FileText, Palette, CheckCircle2, Calculator } from "lucide-react";
+import { Sun, Bot, Globe, Headphones, FileText, Palette, CheckCircle2, ShieldCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const services = [
