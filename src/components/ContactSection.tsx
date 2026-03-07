@@ -25,7 +25,7 @@ const ContactSection = () => {
     const { error } = await supabase.from("contact_submissions").insert({
       name,
       phone,
-      email: "oluwasemiloregoodness@gmail.com",
+      email: "goratechpowerhub@gmail.com",
       message: `Location: ${location}\n\n${message}`,
     });
 
@@ -101,7 +101,7 @@ const ContactSection = () => {
                 <Mail className="h-5 w-5 text-primary mt-0.5 shrink-0" />
                 <div>
                   <p className="font-medium text-sm mb-1">Email</p>
-                  <a href="mailto:oluwasemiloregoodness@gmail.com" className="text-muted-foreground text-sm hover:text-primary transition-colors break-all">oluwasemiloregoodness@gmail.com</a>
+                  <a href="mailto:goratechpowerhub@gmail.com" className="text-muted-foreground text-sm hover:text-primary transition-colors break-all">goratechpowerhub@gmail.com</a>
                 </div>
               </div>
               <div className="flex items-start gap-4">
