@@ -55,16 +55,16 @@ const HeroSection = () => {
           className="flex flex-col sm:flex-row items-center justify-center gap-4 flex-wrap"
         >
           <Button size="lg" className="gap-2 text-base px-8 h-12 shadow-lg shadow-primary/20" asChild>
-            <a href="https://revoltaudit.my.canva.site/" target="_blank" rel="noopener noreferrer">
-              <Calculator className="h-4 w-4" />
-              Get a Free Energy Audit
-            </a>
+            <Link to="/services">
+              <ArrowRight className="h-4 w-4" />
+              View Services
+            </Link>
           </Button>
           <Button size="lg" variant="outline" className="gap-2 text-base px-8 h-12" asChild>
-            <a href="#contact">
+            <Link to="/portfolio">
               <ArrowRight className="h-4 w-4" />
-              Request a Quote
-            </a>
+              See Portfolio
+            </Link>
           </Button>
           <Button size="lg" variant="outline" className="gap-2 text-base px-8 h-12 border-whatsapp/40 text-whatsapp hover:bg-whatsapp/10" asChild>
             <a href="https://wa.me/2348059712276" target="_blank" rel="noopener noreferrer">
