@@ -15,6 +15,7 @@ const portfolioItems = [
   {
     title: "3kVA Home System",
     type: "Residential",
+    image: portfolio3kva,
     description:
       "Perfect for powering lights, fans, TV, and a small fridge. Ideal for Nigerian homes looking to cut generator costs and enjoy uninterrupted power.",
     equipment: [
