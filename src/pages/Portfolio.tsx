@@ -123,9 +123,9 @@ const Portfolio = () => {
                 transition={{ duration: 0.5, delay: i * 0.15 }}
               >
                 <Card className="h-full flex flex-col bg-card border-border overflow-hidden">
-                  <div className="aspect-video overflow-hidden">
-                    <img src={item.image} alt={item.title} className="w-full h-full object-cover" loading="lazy" />
-                  </div>
+                  <a href="https://wa.me/2348059712276" target="_blank" rel="noopener noreferrer" className="block aspect-video overflow-hidden border-2 border-border rounded-t-lg group/img">
+                    <img src={item.image} alt={item.title} className="w-full h-full object-cover transition-transform duration-300 group-hover/img:scale-105" loading="lazy" />
+                  </a>
                   <CardHeader className="pb-3">
                     <div className="flex items-center justify-between mb-2">
                       <CardTitle className="text-xl">{item.title}</CardTitle>
