@@ -1,4 +1,4 @@
-import { Battery, Sun, Zap, ArrowRight, Globe, Bot, BookOpen } from "lucide-react";
+import { Battery, Sun, Zap, ArrowRight, Globe, Bot, BookOpen, ExternalLink, Church } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -10,6 +10,9 @@ import { motion } from "framer-motion";
 import portfolio3kva from "@/assets/portfolio-3kva.jpg";
 import portfolio5kva from "@/assets/portfolio-5kva.jpg";
 import portfolio10kva from "@/assets/portfolio-10kva.jpg";
+import tremoHero from "@/assets/tremo-hero.jpg";
+import tremoSchedule from "@/assets/tremo-schedule.jpg";
+import tremoContact from "@/assets/tremo-contact.jpg";
 
 const energyDesigns = [
   {
@@ -156,6 +159,82 @@ const Portfolio = () => {
               </motion.div>
             ))}
           </div>
+
+          {/* Featured Client Project */}
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.5 }}
+            className="font-display text-2xl sm:text-3xl font-bold mb-8 text-center"
+          >
+            Featured Client <span className="text-gradient">Project</span>
+          </motion.h2>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.6 }}
+            className="max-w-5xl mx-auto mb-20"
+          >
+            <Card className="bg-card border-border overflow-hidden">
+              <CardHeader className="pb-4">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+                    <Church className="h-5 w-5 text-primary" />
+                  </div>
+                  <Badge variant="secondary" className="text-xs">Web Development — Live Project</Badge>
+                </div>
+                <CardTitle className="text-2xl mb-2">TREM Oke Aro — Church Website</CardTitle>
+                <p className="text-muted-foreground">
+                  A fully responsive church website designed and developed for The Redeemed Evangelical Mission (TREM), Oke Aro, Akure. 
+                  Built to provide an inviting online presence — featuring a welcoming hero section, weekly service schedule, 
+                  contact details with Google Maps integration, and social media links. Designed for clarity, warmth, and easy navigation 
+                  across all devices.
+                </p>
+              </CardHeader>
+              <CardContent className="space-y-6">
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-3">Role</p>
+                  <p className="text-sm text-foreground">Full design & development — from concept to deployment</p>
+                </div>
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-3">Technology Stack</p>
+                  <div className="flex flex-wrap gap-2">
+                    {["HTML", "CSS", "JavaScript", "Vercel"].map((t) => (
+                      <Badge key={t} variant="outline" className="text-xs">{t}</Badge>
+                    ))}
+                  </div>
+                </div>
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-3">Screenshots</p>
+                  <div className="grid sm:grid-cols-3 gap-4">
+                    {[
+                      { src: tremoHero, label: "Homepage Hero" },
+                      { src: tremoSchedule, label: "Service Schedule" },
+                      { src: tremoContact, label: "Contact & Map" },
+                    ].map((img) => (
+                      <div key={img.label} className="space-y-2">
+                        <div className="aspect-video rounded-lg overflow-hidden border border-border">
+                          <img src={img.src} alt={`TREM Oke Aro — ${img.label}`} className="w-full h-full object-cover" loading="lazy" />
+                        </div>
+                        <p className="text-xs text-muted-foreground text-center">{img.label}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </CardContent>
+              <CardFooter>
+                <Button className="gap-2" asChild>
+                  <a href="https://tremokearo.vercel.app/" target="_blank" rel="noopener noreferrer">
+                    View Live Site
+                    <ExternalLink className="h-4 w-4" />
+                  </a>
+                </Button>
+              </CardFooter>
+            </Card>
+          </motion.div>
 
           {/* Digital & Virtual Projects */}
           <motion.h2
