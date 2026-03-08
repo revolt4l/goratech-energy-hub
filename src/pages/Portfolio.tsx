@@ -1,4 +1,4 @@
-import { Battery, Sun, Zap, ArrowRight, Globe, Bot, BookOpen } from "lucide-react";
+import { Battery, Sun, Zap, ArrowRight, Globe, Bot, BookOpen, ExternalLink, Church } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -10,6 +10,9 @@ import { motion } from "framer-motion";
 import portfolio3kva from "@/assets/portfolio-3kva.jpg";
 import portfolio5kva from "@/assets/portfolio-5kva.jpg";
 import portfolio10kva from "@/assets/portfolio-10kva.jpg";
+import tremoHero from "@/assets/tremo-hero.jpg";
+import tremoSchedule from "@/assets/tremo-schedule.jpg";
+import tremoContact from "@/assets/tremo-contact.jpg";
 
 const energyDesigns = [
   {
