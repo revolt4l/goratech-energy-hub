@@ -122,7 +122,7 @@ const Portfolio = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: i * 0.15 }}
               >
-                <Card className="h-full flex flex-col bg-card border-border overflow-hidden">
+                <Card className="h-full flex flex-col bg-card border-border overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
                   <a href="https://wa.me/2348059712276" target="_blank" rel="noopener noreferrer" className="block aspect-video overflow-hidden border-2 border-border rounded-t-lg group/img">
                     <img src={item.image} alt={item.title} className="w-full h-full object-cover transition-transform duration-300 group-hover/img:scale-105" loading="lazy" />
                   </a>
