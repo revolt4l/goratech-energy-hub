@@ -1,10 +1,12 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Menu, X, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const navLinks = [
   { label: "About", href: "#about" },
   { label: "Services", href: "#services" },
+  { label: "Portfolio", href: "/portfolio" },
   { label: "Testimonials", href: "#testimonials" },
   { label: "Why Us", href: "#why-us" },
   { label: "Contact", href: "#contact" },
@@ -24,11 +26,17 @@ const Navbar = () => {
 
         {/* Desktop */}
         <div className="hidden md:flex items-center gap-8">
-          {navLinks.map((l) => (
-            <a key={l.href} href={l.href} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-              {l.label}
-            </a>
-          ))}
+          {navLinks.map((l) =>
+            l.href.startsWith("/") ? (
+              <Link key={l.href} to={l.href} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                {l.label}
+              </Link>
+            ) : (
+              <a key={l.href} href={l.href} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                {l.label}
+              </a>
+            )
+          )}
           <Button size="sm" asChild>
             <a href="#contact">Get a Quote</a>
           </Button>
@@ -43,11 +51,17 @@ const Navbar = () => {
       {/* Mobile menu */}
       {open && (
         <div className="md:hidden bg-background border-b border-border px-4 pb-4 space-y-3">
-          {navLinks.map((l) => (
-            <a key={l.href} href={l.href} onClick={() => setOpen(false)} className="block text-sm text-muted-foreground hover:text-foreground transition-colors py-2">
-              {l.label}
-            </a>
-          ))}
+          {navLinks.map((l) =>
+            l.href.startsWith("/") ? (
+              <Link key={l.href} to={l.href} onClick={() => setOpen(false)} className="block text-sm text-muted-foreground hover:text-foreground transition-colors py-2">
+                {l.label}
+              </Link>
+            ) : (
+              <a key={l.href} href={l.href} onClick={() => setOpen(false)} className="block text-sm text-muted-foreground hover:text-foreground transition-colors py-2">
+                {l.label}
+              </a>
+            )
+          )}
           <Button size="sm" className="w-full" asChild>
             <a href="#contact" onClick={() => setOpen(false)}>Get a Quote</a>
           </Button>
