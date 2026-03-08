@@ -36,9 +36,18 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-12"
+          className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-4"
         >
           From solar installation to web design, AI automation, and business support — your all-in-one technology partner in Nigeria.
+        </motion.p>
+
+        <motion.p
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+          className="text-sm text-muted-foreground/70 italic max-w-xl mx-auto mb-12"
+        >
+          Goratech Energy Hub combines innovative energy solutions with web, virtual, and digital expertise — all designed and built by me.
         </motion.p>
 
         <motion.div

@@ -1,4 +1,4 @@
-import { Sun, Bot, Globe, Headphones, FileText, Palette, CheckCircle2, ShieldCheck } from "lucide-react";
+import { Sun, Bot, Globe, Headphones, FileText, Palette, CheckCircle2, ShieldCheck, GraduationCap, BookOpen, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
@@ -6,33 +6,38 @@ import { motion } from "framer-motion";
 const services = [
   {
     icon: Sun,
-    title: "Solar Installation & Inverter Setup",
-    items: ["Energy Audits & Load Calculation", "On-grid, Off-grid & Hybrid Systems", "Inverter & Battery Installation"],
+    title: "Energy Solutions & System Design",
+    items: ["Energy Audits & Load Calculation", "On-grid, Off-grid & Hybrid Systems", "Inverter & Battery Installation", "Maintenance & Troubleshooting"],
   },
   {
     icon: Globe,
-    title: "Website Design & Domain Setup",
-    items: ["Custom Website Development", "Domain Registration & Hosting", "SEO & Digital Presence"],
+    title: "Web Development & Digital Tools",
+    items: ["Custom Website Design & Development", "Domain Registration & Hosting", "SEO & Digital Presence", "Web App & Dashboard Builds"],
   },
   {
     icon: Bot,
     title: "AI Automation & Prompt Engineering",
-    items: ["AI-Powered Business Tools", "Workflow Automation", "Custom AI Prompt Solutions"],
+    items: ["AI-Powered Business Tools", "Workflow Automation", "Custom AI Prompt Solutions", "Chatbot & Assistant Setup"],
   },
   {
     icon: Headphones,
-    title: "Virtual Assistance & Tech Support",
-    items: ["Remote Administrative Support", "Technical Troubleshooting", "Business Process Management"],
+    title: "Technical Consulting & Virtual Assistance",
+    items: ["Remote Administrative Support", "Technical Troubleshooting", "Business Process Management", "Project Coordination"],
   },
   {
-    icon: FileText,
-    title: "Proposal Writing & Documentation",
-    items: ["Business Proposals & Bids", "Technical Documentation", "Professional Reports"],
+    icon: BookOpen,
+    title: "Digital Guides & Content Creation",
+    items: ["Technical Writing & Documentation", "Digital Guides & E-books", "Business Proposals & Bids", "Social Media Content Strategy"],
   },
   {
     icon: Palette,
     title: "Graphic Design & Branding",
-    items: ["Logo & Brand Identity", "Marketing Materials", "Social Media Graphics"],
+    items: ["Logo & Brand Identity", "Marketing Materials", "Social Media Graphics", "Presentation Design"],
+  },
+  {
+    icon: GraduationCap,
+    title: "Tech Tutoring & Workshops",
+    items: ["One-on-One Tech Coaching", "Solar Energy Basics Training", "Web & AI Tool Workshops", "Business Digitization Guidance"],
   },
 ];
 
@@ -51,7 +56,7 @@ const ServicesSection = () => {
             Our <span className="text-gradient">Services</span>
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
-            End-to-end solar, digital, and business solutions tailored for Nigerian homes and businesses.
+            End-to-end energy, web development, virtual, and digital solutions tailored for Nigerian homes and businesses.
           </p>
         </motion.div>
 
@@ -64,7 +69,7 @@ const ServicesSection = () => {
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: i * 0.08 }}
               whileHover={{ y: -6, transition: { duration: 0.2 } }}
-              className="rounded-xl border border-border bg-card p-8 glow-box hover:border-primary/30 transition-colors cursor-default"
+              className="rounded-xl border border-border bg-card p-8 glow-box hover:border-primary/30 transition-colors flex flex-col"
             >
               <div className="flex items-center gap-3 mb-6">
                 <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center">
@@ -72,7 +77,7 @@ const ServicesSection = () => {
                 </div>
                 <h3 className="font-display font-semibold text-lg">{s.title}</h3>
               </div>
-              <ul className="space-y-4">
+              <ul className="space-y-4 flex-1">
                 {s.items.map((item) => (
                   <li key={item} className="flex items-start gap-3 text-muted-foreground">
                     <CheckCircle2 className="h-5 w-5 text-primary shrink-0 mt-0.5" />
@@ -80,6 +85,12 @@ const ServicesSection = () => {
                   </li>
                 ))}
               </ul>
+              <Button variant="outline" className="w-full mt-6 gap-2" asChild>
+                <Link to="/contact">
+                  Get a Quote
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+              </Button>
             </motion.div>
           ))}
         </div>
