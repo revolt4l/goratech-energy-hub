@@ -27,9 +27,7 @@ const HeroSection = () => {
           transition={{ duration: 0.7, delay: 0.15 }}
           className="font-display text-4xl sm:text-5xl lg:text-7xl font-bold leading-[1.1] mb-6 tracking-tight"
         >
-          Powering Businesses with{" "}
-          <span className="text-gradient">Solar Energy</span>{" "}
-          & Smart Digital Solutions
+          <span className="text-gradient">Goratech Power Hub</span>: Innovative Energy Solutions Powered by Tech
         </motion.h1>
 
         <motion.p
@@ -38,7 +36,7 @@ const HeroSection = () => {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-4"
         >
-          From solar installation to web design, AI automation, and business support — your all-in-one technology partner in Nigeria.
+          At Goratech, we deliver smart energy solutions and digital tools that help homes and businesses save energy, increase reliability, and simplify power management. Explore our services, see example projects, or get in touch to design your custom solution.
         </motion.p>
 
         <motion.p
@@ -47,7 +45,7 @@ const HeroSection = () => {
           transition={{ duration: 0.5, delay: 0.4 }}
           className="text-sm text-muted-foreground/70 italic max-w-xl mx-auto mb-12"
         >
-          Goratech Energy Hub combines innovative energy solutions with web, virtual, and digital expertise — all designed and built by me.
+          Site designed and built by me — web development &amp; digital skills included.
         </motion.p>
 
         <motion.div
