@@ -17,35 +17,35 @@ const energyDesigns = [
     type: "Residential",
     image: portfolio3kva,
     description:
-      "An ideal entry-level design for powering lights, fans, TV, and a small fridge — helping Nigerian homes reduce generator dependency and enjoy quiet, uninterrupted power.",
+      "Powers lights, fans, fridge, and TV — helping Nigerian homes reduce generator dependency and enjoy quiet, uninterrupted power.",
     equipment: [
-      "3.5kVA Hybrid Inverter",
+      "3kVA Hybrid Inverter",
       "2× 200Ah Tubular Batteries",
-      "4× 300W Monocrystalline Solar Panels",
+      "6× 330W Monocrystalline Solar Panels",
     ],
   },
   {
-    title: "5kVA Family Power System",
-    type: "Residential",
+    title: "Small Office Energy Solution",
+    type: "Small Business",
     image: portfolio5kva,
     description:
-      "Designed for medium-sized households that need to run AC units, washing machines, and multiple appliances with reliable, noise-free 24/7 power.",
+      "Designed for offices needing reliable power for computers, printers, networking equipment, and lighting throughout the workday.",
     equipment: [
       "5kVA Hybrid Inverter",
-      "4× 200Ah Lithium Batteries",
-      "8× 400W Monocrystalline Solar Panels",
+      "4× 250Ah Lithium Batteries",
+      "10× 330W Monocrystalline Solar Panels",
     ],
   },
   {
-    title: "10kVA Shop & Office System",
-    type: "Shop / Small Business",
+    title: "Shop / Retail Energy Setup",
+    type: "Retail Shop",
     image: portfolio10kva,
     description:
-      "A robust design for shops, offices, and small businesses needing consistent power for computers, printers, freezers, and lighting throughout the workday.",
+      "A compact, efficient design for shops powering lighting, POS systems, and refrigeration units reliably during business hours.",
     equipment: [
-      "10kVA Hybrid Inverter",
-      "8× 200Ah Lithium Batteries",
-      "16× 400W Monocrystalline Solar Panels",
+      "2kVA Hybrid Inverter",
+      "2× 150Ah Tubular Batteries",
+      "4× 250W Monocrystalline Solar Panels",
     ],
   },
 ];
@@ -53,7 +53,7 @@ const energyDesigns = [
 const digitalProjects = [
   {
     icon: Globe,
-    title: "Goratech Energy Hub Website",
+    title: "Goratech Power Hub Website",
     type: "Web Development",
     description:
       "This very website — designed, coded, and deployed from scratch using React, TypeScript, and Tailwind CSS. Features responsive design, smooth animations, and a contact form connected to a live database.",
@@ -61,19 +61,19 @@ const digitalProjects = [
   },
   {
     icon: Bot,
-    title: "AI-Powered Solar Load Calculator",
-    type: "AI Tool / Dashboard",
+    title: "Energy System Cost Calculator",
+    type: "Interactive Tool",
     description:
-      "An interactive tool concept that uses AI to estimate solar system requirements based on a household's appliance usage, location, and budget — simplifying the audit process for clients.",
-    tech: ["AI Integration", "Data Visualization", "UX Design"],
+      "An interactive tool to estimate solar system size and cost based on appliance usage and budget — simplifying the decision process for clients.",
+    tech: ["Web Development", "JavaScript", "UX Design"],
   },
   {
     icon: BookOpen,
-    title: "Solar Energy Basics — Digital Guide",
+    title: 'Digital Guide: "Optimizing Home Energy Use"',
     type: "Content / Writing",
     description:
-      "A comprehensive beginner's guide to solar energy in Nigeria, covering system types, battery options, cost breakdowns, and maintenance tips — written and designed for clarity.",
-    tech: ["Technical Writing", "Graphic Design", "Digital Publishing"],
+      "A comprehensive written guide with practical energy-saving tips for Nigerian homes — covering system types, usage habits, and cost optimization.",
+    tech: ["Technical Writing", "Digital Content Creation"],
   },
 ];
 
