@@ -122,10 +122,10 @@ const Portfolio = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: i * 0.15 }}
               >
-                <Card className="h-full flex flex-col bg-card border-border overflow-hidden">
-                  <div className="aspect-video overflow-hidden">
-                    <img src={item.image} alt={item.title} className="w-full h-full object-cover" loading="lazy" />
-                  </div>
+                <Card className="h-full flex flex-col bg-card border-border overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+                  <a href="https://wa.me/2348059712276" target="_blank" rel="noopener noreferrer" className="block aspect-video overflow-hidden border-2 border-border rounded-t-lg group/img">
+                    <img src={item.image} alt={item.title} className="w-full h-full object-cover transition-transform duration-300 group-hover/img:scale-105" loading="lazy" />
+                  </a>
                   <CardHeader className="pb-3">
                     <div className="flex items-center justify-between mb-2">
                       <CardTitle className="text-xl">{item.title}</CardTitle>
@@ -216,9 +216,9 @@ const Portfolio = () => {
                       { src: tremoContact, label: "Contact & Map" },
                     ].map((img) => (
                       <div key={img.label} className="space-y-2">
-                        <div className="aspect-video rounded-lg overflow-hidden border border-border">
-                          <img src={img.src} alt={`TREM Oke Aro — ${img.label}`} className="w-full h-full object-cover" loading="lazy" />
-                        </div>
+                        <a href="https://tremokearo.vercel.app/" target="_blank" rel="noopener noreferrer" className="block aspect-video rounded-lg overflow-hidden border-2 border-border shadow-md hover:shadow-xl hover:border-primary/40 transition-all duration-300 group/img">
+                          <img src={img.src} alt={`TREM Oke Aro — ${img.label}`} className="w-full h-full object-cover transition-transform duration-300 group-hover/img:scale-105" loading="lazy" />
+                        </a>
                         <p className="text-xs text-muted-foreground text-center">{img.label}</p>
                       </div>
                     ))}
