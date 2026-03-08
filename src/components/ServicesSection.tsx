@@ -1,4 +1,5 @@
 import { Sun, Bot, Globe, Headphones, FileText, Palette, CheckCircle2, ShieldCheck } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 
@@ -102,7 +103,7 @@ const ServicesSection = () => {
               Register your business with the Corporate Affairs Commission (CAC) and obtain official certification. We handle the entire process so you can focus on growing your business.
             </p>
             <Button className="gap-2 bg-green-600 hover:bg-green-700 text-white" asChild>
-              <a href="#contact">Register Now</a>
+              <Link to="/contact">Register Now</Link>
             </Button>
           </div>
         </motion.div>
