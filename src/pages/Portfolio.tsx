@@ -7,10 +7,15 @@ import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import { motion } from "framer-motion";
 
+import portfolio3kva from "@/assets/portfolio-3kva.jpg";
+import portfolio5kva from "@/assets/portfolio-5kva.jpg";
+import portfolio10kva from "@/assets/portfolio-10kva.jpg";
+
 const portfolioItems = [
   {
     title: "3kVA Home System",
     type: "Residential",
+    image: portfolio3kva,
     description:
       "Perfect for powering lights, fans, TV, and a small fridge. Ideal for Nigerian homes looking to cut generator costs and enjoy uninterrupted power.",
     equipment: [
@@ -22,6 +27,7 @@ const portfolioItems = [
   {
     title: "5kVA Family System",
     type: "Residential",
+    image: portfolio5kva,
     description:
       "Designed for medium-sized households running AC units, washing machines, and multiple appliances. Reliable 24/7 power with zero noise.",
     equipment: [
@@ -33,6 +39,7 @@ const portfolioItems = [
   {
     title: "10kVA Business System",
     type: "Small Business",
+    image: portfolio10kva,
     description:
       "Built for shops, offices, and small businesses that need consistent power for computers, printers, freezers, and lighting throughout the day.",
     equipment: [
@@ -73,9 +80,9 @@ const Portfolio = () => {
                 transition={{ duration: 0.5, delay: i * 0.15 }}
               >
                 <Card className="h-full flex flex-col bg-card border-border overflow-hidden">
-                  {/* Placeholder image */}
-                  <div className="aspect-video bg-secondary flex items-center justify-center">
-                    <Sun className="h-16 w-16 text-primary/40" />
+                  {/* Portfolio image */}
+                  <div className="aspect-video overflow-hidden">
+                    <img src={item.image} alt={item.title} className="w-full h-full object-cover" loading="lazy" />
                   </div>
 
                   <CardHeader className="pb-3">
