@@ -1,4 +1,5 @@
-import { ArrowRight, MessageCircle, Calculator, Zap } from "lucide-react";
+import { ArrowRight, MessageCircle, Zap } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import heroBg from "@/assets/hero-bg.jpg";
