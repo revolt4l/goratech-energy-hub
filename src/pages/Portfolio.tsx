@@ -27,6 +27,7 @@ const portfolioItems = [
   {
     title: "5kVA Family System",
     type: "Residential",
+    image: portfolio5kva,
     description:
       "Designed for medium-sized households running AC units, washing machines, and multiple appliances. Reliable 24/7 power with zero noise.",
     equipment: [
