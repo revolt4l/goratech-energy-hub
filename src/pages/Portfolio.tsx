@@ -7,6 +7,10 @@ import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import { motion } from "framer-motion";
 
+import portfolio3kva from "@/assets/portfolio-3kva.jpg";
+import portfolio5kva from "@/assets/portfolio-5kva.jpg";
+import portfolio10kva from "@/assets/portfolio-10kva.jpg";
+
 const portfolioItems = [
   {
     title: "3kVA Home System",
