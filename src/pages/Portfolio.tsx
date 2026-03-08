@@ -216,9 +216,9 @@ const Portfolio = () => {
                       { src: tremoContact, label: "Contact & Map" },
                     ].map((img) => (
                       <div key={img.label} className="space-y-2">
-                        <div className="aspect-video rounded-lg overflow-hidden border border-border">
-                          <img src={img.src} alt={`TREM Oke Aro — ${img.label}`} className="w-full h-full object-cover" loading="lazy" />
-                        </div>
+                        <a href="https://tremokearo.vercel.app/" target="_blank" rel="noopener noreferrer" className="block aspect-video rounded-lg overflow-hidden border-2 border-border shadow-md hover:shadow-xl hover:border-primary/40 transition-all duration-300 group/img">
+                          <img src={img.src} alt={`TREM Oke Aro — ${img.label}`} className="w-full h-full object-cover transition-transform duration-300 group-hover/img:scale-105" loading="lazy" />
+                        </a>
                         <p className="text-xs text-muted-foreground text-center">{img.label}</p>
                       </div>
                     ))}
