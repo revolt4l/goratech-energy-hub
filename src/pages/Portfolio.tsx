@@ -80,9 +80,9 @@ const Portfolio = () => {
                 transition={{ duration: 0.5, delay: i * 0.15 }}
               >
                 <Card className="h-full flex flex-col bg-card border-border overflow-hidden">
-                  {/* Placeholder image */}
-                  <div className="aspect-video bg-secondary flex items-center justify-center">
-                    <Sun className="h-16 w-16 text-primary/40" />
+                  {/* Portfolio image */}
+                  <div className="aspect-video overflow-hidden">
+                    <img src={item.image} alt={item.title} className="w-full h-full object-cover" loading="lazy" />
                   </div>
 
                   <CardHeader className="pb-3">
