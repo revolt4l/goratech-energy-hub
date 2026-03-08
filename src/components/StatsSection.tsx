@@ -2,10 +2,10 @@ import { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 
 const stats = [
-  { value: 150, suffix: "+", label: "Solar Installations" },
+  { value: 5, suffix: "+", label: "Solar Installations" },
   { value: 98, suffix: "%", label: "Client Satisfaction" },
-  { value: 50, suffix: "+", label: "Business Websites Built" },
-  { value: 5, suffix: "+", label: "Years Experience" },
+  { value: 3, suffix: "+", label: "Business Websites Built" },
+  { value: 2, suffix: "+", label: "Years Experience" },
 ];
 
 function AnimatedCounter({ target, suffix }: { target: number; suffix: string }) {

@@ -9,11 +9,6 @@ const HeroSection = () => {
       <img src={heroBg} alt="" className="absolute inset-0 w-full h-full object-cover" />
       <div className="absolute inset-0 hero-overlay" />
 
-      {/* Animated grid pattern overlay */}
-      <div className="absolute inset-0 opacity-[0.03]" style={{
-        backgroundImage: `linear-gradient(hsl(var(--primary)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--primary)) 1px, transparent 1px)`,
-        backgroundSize: '60px 60px'
-      }} />
 
       <div className="relative z-10 container mx-auto px-4 text-center max-w-5xl">
         <motion.div
