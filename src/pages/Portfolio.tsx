@@ -39,6 +39,7 @@ const portfolioItems = [
   {
     title: "10kVA Business System",
     type: "Small Business",
+    image: portfolio10kva,
     description:
       "Built for shops, offices, and small businesses that need consistent power for computers, printers, freezers, and lighting throughout the day.",
     equipment: [
