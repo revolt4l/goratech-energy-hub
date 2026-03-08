@@ -17,35 +17,35 @@ const energyDesigns = [
     type: "Residential",
     image: portfolio3kva,
     description:
-      "An ideal entry-level design for powering lights, fans, TV, and a small fridge — helping Nigerian homes reduce generator dependency and enjoy quiet, uninterrupted power.",
+      "Powers lights, fans, fridge, and TV — helping Nigerian homes reduce generator dependency and enjoy quiet, uninterrupted power.",
     equipment: [
-      "3.5kVA Hybrid Inverter",
+      "3kVA Hybrid Inverter",
       "2× 200Ah Tubular Batteries",
-      "4× 300W Monocrystalline Solar Panels",
+      "6× 330W Monocrystalline Solar Panels",
     ],
   },
   {
-    title: "5kVA Family Power System",
-    type: "Residential",
+    title: "Small Office Energy Solution",
+    type: "Small Business",
     image: portfolio5kva,
     description:
-      "Designed for medium-sized households that need to run AC units, washing machines, and multiple appliances with reliable, noise-free 24/7 power.",
+      "Designed for offices needing reliable power for computers, printers, networking equipment, and lighting throughout the workday.",
     equipment: [
       "5kVA Hybrid Inverter",
-      "4× 200Ah Lithium Batteries",
-      "8× 400W Monocrystalline Solar Panels",
+      "4× 250Ah Lithium Batteries",
+      "10× 330W Monocrystalline Solar Panels",
     ],
   },
   {
-    title: "10kVA Shop & Office System",
-    type: "Shop / Small Business",
+    title: "Shop / Retail Energy Setup",
+    type: "Retail Shop",
     image: portfolio10kva,
     description:
-      "A robust design for shops, offices, and small businesses needing consistent power for computers, printers, freezers, and lighting throughout the workday.",
+      "A compact, efficient design for shops powering lighting, POS systems, and refrigeration units reliably during business hours.",
     equipment: [
-      "10kVA Hybrid Inverter",
-      "8× 200Ah Lithium Batteries",
-      "16× 400W Monocrystalline Solar Panels",
+      "2kVA Hybrid Inverter",
+      "2× 150Ah Tubular Batteries",
+      "4× 250W Monocrystalline Solar Panels",
     ],
   },
 ];
