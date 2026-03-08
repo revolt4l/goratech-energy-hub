@@ -13,11 +13,11 @@ import portfolio10kva from "@/assets/portfolio-10kva.jpg";
 
 const portfolioItems = [
   {
-    title: "3kVA Home System",
+    title: "3kVA Home Backup System",
     type: "Residential",
     image: portfolio3kva,
     description:
-      "Perfect for powering lights, fans, TV, and a small fridge. Ideal for Nigerian homes looking to cut generator costs and enjoy uninterrupted power.",
+      "An ideal entry-level design for powering lights, fans, TV, and a small fridge — helping Nigerian homes reduce generator dependency and enjoy quiet, uninterrupted power.",
     equipment: [
       "3.5kVA Hybrid Inverter",
       "2× 200Ah Tubular Batteries",
@@ -25,11 +25,11 @@ const portfolioItems = [
     ],
   },
   {
-    title: "5kVA Family System",
+    title: "5kVA Family Power System",
     type: "Residential",
     image: portfolio5kva,
     description:
-      "Designed for medium-sized households running AC units, washing machines, and multiple appliances. Reliable 24/7 power with zero noise.",
+      "Designed for medium-sized households that need to run AC units, washing machines, and multiple appliances with reliable, noise-free 24/7 power.",
     equipment: [
       "5kVA Hybrid Inverter",
       "4× 200Ah Lithium Batteries",
@@ -37,11 +37,11 @@ const portfolioItems = [
     ],
   },
   {
-    title: "10kVA Business System",
-    type: "Small Business",
+    title: "10kVA Shop & Office System",
+    type: "Shop / Small Business",
     image: portfolio10kva,
     description:
-      "Built for shops, offices, and small businesses that need consistent power for computers, printers, freezers, and lighting throughout the day.",
+      "A robust design for shops, offices, and small businesses needing consistent power for computers, printers, freezers, and lighting throughout the workday.",
     equipment: [
       "10kVA Hybrid Inverter",
       "8× 200Ah Lithium Batteries",
@@ -64,10 +64,13 @@ const Portfolio = () => {
             className="text-center mb-16"
           >
             <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
-              Our Solar <span className="text-gradient">Portfolio</span>
+              Example System <span className="text-gradient">Designs</span>
             </h1>
-            <p className="text-muted-foreground max-w-xl mx-auto">
+            <p className="text-muted-foreground max-w-xl mx-auto mb-4">
               Explore our most popular solar system designs — built for Nigerian homes and businesses.
+            </p>
+            <p className="text-sm text-muted-foreground/80 italic max-w-lg mx-auto">
+              These designs are examples to demonstrate our approach to energy solutions.
             </p>
           </motion.div>
 
