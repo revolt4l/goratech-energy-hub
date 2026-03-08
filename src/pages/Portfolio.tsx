@@ -64,10 +64,13 @@ const Portfolio = () => {
             className="text-center mb-16"
           >
             <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
-              Our Solar <span className="text-gradient">Portfolio</span>
+              Example System <span className="text-gradient">Designs</span>
             </h1>
-            <p className="text-muted-foreground max-w-xl mx-auto">
+            <p className="text-muted-foreground max-w-xl mx-auto mb-4">
               Explore our most popular solar system designs — built for Nigerian homes and businesses.
+            </p>
+            <p className="text-sm text-muted-foreground/80 italic max-w-lg mx-auto">
+              These designs are examples to demonstrate our approach to energy solutions.
             </p>
           </motion.div>
 
