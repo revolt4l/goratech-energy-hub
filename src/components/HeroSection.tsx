@@ -3,17 +3,17 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 
-const BRAND_TEXT = "GoRatech Power Hub";
+const BRAND_TEXT = "GORATECH POWER HUB";
 
-// Split into words, preserving spaces as separators
+// Split into words
 const words = BRAND_TEXT.split(" ");
 
 const letterVariants = {
   hidden: (i: number) => ({
     opacity: 0,
-    y: i % 3 === 0 ? -22 : i % 3 === 1 ? 22 : 0,
-    x: i % 4 === 0 ? -12 : i % 4 === 2 ? 12 : 0,
-    scale: 0.7,
+    y: i % 3 === 0 ? -24 : i % 3 === 1 ? 24 : 0,
+    x: i % 4 === 0 ? -14 : i % 4 === 2 ? 14 : 0,
+    scale: 0.65,
   }),
   visible: {
     opacity: 1,
@@ -27,8 +27,8 @@ const containerVariants = {
   hidden: {},
   visible: {
     transition: {
-      staggerChildren: 0.045,
-      delayChildren: 0.1,
+      staggerChildren: 0.04,
+      delayChildren: 0.05,
     },
   },
 };
@@ -40,7 +40,8 @@ const AssembledBrandText = () => {
       variants={containerVariants}
       initial="hidden"
       animate="visible"
-      className="inline-flex flex-wrap justify-center gap-x-[0.25em]"
+      className="inline-flex flex-wrap justify-center gap-x-[0.2em]"
+      style={{ willChange: "transform" }}
     >
       {words.map((word, wi) => (
         <span key={wi} className="inline-flex">
@@ -53,11 +54,11 @@ const AssembledBrandText = () => {
                 variants={letterVariants}
                 transition={{
                   type: "spring",
-                  stiffness: 320,
-                  damping: 22,
-                  mass: 0.7,
+                  stiffness: 380,
+                  damping: 26,
+                  mass: 0.6,
                 }}
-                className="inline-block"
+                style={{ display: "inline-block", willChange: "transform, opacity" }}
               >
                 {char}
               </motion.span>
@@ -112,10 +113,18 @@ const HeroSection = () => {
         }}
       />
 
-      <div className="relative z-10 container mx-auto px-6 text-center max-w-5xl">
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 text-center max-w-6xl">
         {/* Brand name — letter-assembly animation, hero-dominant */}
-        <div className="mb-8">
-          <h1 className="font-display text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-extrabold leading-[1.05] tracking-tight text-gradient glow-text">
+        <div className="mb-6">
+          <h1
+            className="font-display font-extrabold leading-none tracking-wider text-gradient"
+            style={{
+              fontSize: "clamp(2.8rem, 10vw, 8rem)",
+              WebkitFontSmoothing: "antialiased",
+              MozOsxFontSmoothing: "grayscale",
+              textRendering: "optimizeLegibility",
+            }}
+          >
             <AssembledBrandText />
           </h1>
         </div>
