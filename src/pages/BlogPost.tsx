@@ -92,6 +92,14 @@ const BlogPost = () => {
               <Skeleton className="h-4 w-1/4" />
               <Skeleton className="h-64 w-full" />
             </div>
+          ) : error ? (
+            <div className="text-center py-16">
+              <h2 className="font-display text-2xl font-bold mb-4">Unable to Load Post</h2>
+              <p className="text-muted-foreground mb-6">{error}</p>
+              <Button asChild>
+                <Link to="/blog">Back to Blog</Link>
+              </Button>
+            </div>
           ) : !post ? (
             <div className="text-center py-16">
               <h2 className="font-display text-2xl font-bold mb-4">Post Not Found</h2>

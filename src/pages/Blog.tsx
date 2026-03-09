@@ -85,6 +85,8 @@ const Blog = () => {
                 </Card>
               ))}
             </div>
+          ) : error ? (
+            <p className="text-center text-muted-foreground">{error}</p>
           ) : posts.length === 0 ? (
             <p className="text-center text-muted-foreground">No articles yet. Check back soon!</p>
           ) : (

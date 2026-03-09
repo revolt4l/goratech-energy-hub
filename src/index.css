@@ -128,7 +128,10 @@
 
   .card-hover {
     @apply transition-all duration-300 hover:-translate-y-2 hover:border-primary/40;
-    hover-box-shadow: var(--shadow-glow);
+  }
+
+  .card-hover:hover {
+    box-shadow: var(--shadow-glow);
   }
 
   .btn-gradient {
