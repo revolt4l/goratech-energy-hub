@@ -58,7 +58,8 @@ const AssembledBrandText = () => {
                   damping: 26,
                   mass: 0.6,
                 }}
-                style={{ display: "inline-block", willChange: "transform, opacity" }}
+                className="inline-block text-gradient"
+                style={{ willChange: "transform, opacity" }}
               >
                 {char}
               </motion.span>
