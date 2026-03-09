@@ -20,6 +20,10 @@ const Footer = () => {
           <Link to="/contact" className="hover:text-foreground transition-colors">Contact</Link>
         </div>
         <p className="text-muted-foreground/60 text-xs">© 2026 GORATECH POWER HUB. All Rights Reserved.</p>
+        <p className="text-muted-foreground/50 text-[11px] mt-2">
+          Website designed and developed by{" "}
+          <a href="https://goratechpowerhub.vercel.app" target="_blank" rel="noopener noreferrer" className="text-muted-foreground/70 hover:text-primary transition-colors underline underline-offset-2">Goratech Power Hub</a>
+        </p>
       </div>
     </footer>
   );
