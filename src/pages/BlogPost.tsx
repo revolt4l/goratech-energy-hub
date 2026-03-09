@@ -22,19 +22,41 @@ const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
   const [post, setPost] = useState<Post | null>(null);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
+    let cancelled = false;
+
     const fetchPost = async () => {
-      const { data } = await supabase
-        .from("blog_posts")
-        .select("id, title, content, image_url, created_at")
-        .eq("slug", slug)
-        .eq("published", true)
-        .maybeSingle();
-      setPost(data);
-      setLoading(false);
+      try {
+        setError(null);
+
+        if (!slug) {
+          if (!cancelled) setPost(null);
+          return;
+        }
+
+        const { data, error } = await supabase
+          .from("blog_posts")
+          .select("id, title, content, image_url, created_at")
+          .eq("slug", slug)
+          .eq("published", true)
+          .maybeSingle();
+
+        if (error) throw error;
+        if (!cancelled) setPost(data);
+      } catch (e: any) {
+        if (!cancelled) setError(e?.message ?? "Failed to load this post.");
+      } finally {
+        if (!cancelled) setLoading(false);
+      }
     };
+
     fetchPost();
+
+    return () => {
+      cancelled = true;
+    };
   }, [slug]);
 
   // Simple markdown-to-HTML: headings, bold, italic, links, lists, hr
@@ -69,6 +91,14 @@ const BlogPost = () => {
               <Skeleton className="h-10 w-3/4" />
               <Skeleton className="h-4 w-1/4" />
               <Skeleton className="h-64 w-full" />
+            </div>
+          ) : error ? (
+            <div className="text-center py-16">
+              <h2 className="font-display text-2xl font-bold mb-4">Unable to Load Post</h2>
+              <p className="text-muted-foreground mb-6">{error}</p>
+              <Button asChild>
+                <Link to="/blog">Back to Blog</Link>
+              </Button>
             </div>
           ) : !post ? (
             <div className="text-center py-16">
