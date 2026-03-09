@@ -117,12 +117,15 @@ const HeroSection = () => {
         {/* Brand name — letter-assembly animation, hero-dominant */}
         <div className="mb-6">
           <h1
-            className="font-display font-extrabold leading-none tracking-wider text-gradient"
+            className="relative font-display font-extrabold leading-none tracking-wider text-foreground"
             style={{
               fontSize: "clamp(2.8rem, 10vw, 8rem)",
               WebkitFontSmoothing: "antialiased",
               MozOsxFontSmoothing: "grayscale",
               textRendering: "optimizeLegibility",
+              // Subtle glow to ensure readability over animated backgrounds
+              filter:
+                "drop-shadow(0 0 18px hsl(var(--primary) / 0.22)) drop-shadow(0 0 34px hsl(var(--accent) / 0.14))",
             }}
           >
             <AssembledBrandText />
