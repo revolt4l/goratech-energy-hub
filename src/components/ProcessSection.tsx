@@ -103,7 +103,7 @@ const ProcessSection = () => {
                       transition={{ duration: 2, repeat: Infinity, delay: i * 0.5 }}
                       className={`w-6 h-6 rounded-full ${step.bg} border-2 ${step.border} flex items-center justify-center`}
                     >
-                      <div className={`w-2 h-2 rounded-full ${step.color.replace('text-', 'bg-')}`} />
+                      <div className="w-2 h-2 rounded-full bg-current" style={{ color: "inherit" }} />
                     </motion.div>
                   </div>
                 )}
