@@ -11,17 +11,15 @@ const words = BRAND_TEXT.split(" ");
 const letterVariants = {
   hidden: (i: number) => ({
     opacity: 0,
-    y: i % 3 === 0 ? -18 : i % 3 === 1 ? 18 : 0,
-    x: i % 4 === 0 ? -10 : i % 4 === 2 ? 10 : 0,
-    scale: 0.6,
-    filter: "blur(4px)",
+    y: i % 3 === 0 ? -22 : i % 3 === 1 ? 22 : 0,
+    x: i % 4 === 0 ? -12 : i % 4 === 2 ? 12 : 0,
+    scale: 0.7,
   }),
   visible: {
     opacity: 1,
     y: 0,
     x: 0,
     scale: 1,
-    filter: "blur(0px)",
   },
 };
 
