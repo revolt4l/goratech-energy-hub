@@ -133,8 +133,8 @@ const ServicesSection = () => {
           className="text-center"
         >
           <Button size="lg" className="gap-2 rounded-xl btn-gradient border-0 px-10" style={{ height: "52px" }} asChild>
-            <Link to="/services">
-              View All Services
+            <Link to="/contact">
+              Get a Custom Quote
               <ArrowRight className="h-4 w-4" />
             </Link>
           </Button>
