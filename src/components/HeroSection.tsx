@@ -1,7 +1,75 @@
-import { ArrowRight, MessageCircle } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+
+const BRAND_TEXT = "GoRatech Power Hub";
+
+// Split into words, preserving spaces as separators
+const words = BRAND_TEXT.split(" ");
+
+const letterVariants = {
+  hidden: (i: number) => ({
+    opacity: 0,
+    y: i % 3 === 0 ? -18 : i % 3 === 1 ? 18 : 0,
+    x: i % 4 === 0 ? -10 : i % 4 === 2 ? 10 : 0,
+    scale: 0.6,
+    filter: "blur(4px)",
+  }),
+  visible: {
+    opacity: 1,
+    y: 0,
+    x: 0,
+    scale: 1,
+    filter: "blur(0px)",
+  },
+};
+
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.045,
+      delayChildren: 0.1,
+    },
+  },
+};
+
+const AssembledBrandText = () => {
+  let globalIndex = 0;
+  return (
+    <motion.span
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+      className="inline-flex flex-wrap justify-center gap-x-[0.25em]"
+    >
+      {words.map((word, wi) => (
+        <span key={wi} className="inline-flex">
+          {word.split("").map((char) => {
+            const idx = globalIndex++;
+            return (
+              <motion.span
+                key={idx}
+                custom={idx}
+                variants={letterVariants}
+                transition={{
+                  type: "spring",
+                  stiffness: 320,
+                  damping: 22,
+                  mass: 0.7,
+                }}
+                className="inline-block"
+              >
+                {char}
+              </motion.span>
+            );
+          })}
+        </span>
+      ))}
+    </motion.span>
+  );
+};
 
 const HeroSection = () => {
   return (
@@ -47,16 +115,16 @@ const HeroSection = () => {
       />
 
       <div className="relative z-10 container mx-auto px-6 text-center max-w-4xl">
-        {/* Eyebrow tag */}
+        {/* Eyebrow tag — letter-assembly animation */}
         <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.55 }}
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.4 }}
           className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/25 text-primary text-xs font-semibold tracking-wider uppercase mb-10 backdrop-blur-sm"
           style={{ background: "hsl(var(--primary) / 0.07)" }}
         >
-          <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
-          Goratech Power Hub
+          <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse flex-shrink-0" />
+          <AssembledBrandText />
         </motion.div>
 
         {/* Headline */}
@@ -140,3 +208,4 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
+
