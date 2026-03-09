@@ -114,36 +114,29 @@ const HeroSection = () => {
         }}
       />
 
-      <div className="relative z-10 container mx-auto px-6 text-center max-w-4xl">
-        {/* Eyebrow tag — letter-assembly animation */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.4 }}
-          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/25 text-primary text-xs font-semibold tracking-wider uppercase mb-10 backdrop-blur-sm"
-          style={{ background: "hsl(var(--primary) / 0.07)" }}
-        >
-          <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse flex-shrink-0" />
-          <AssembledBrandText />
-        </motion.div>
+      <div className="relative z-10 container mx-auto px-6 text-center max-w-5xl">
+        {/* Brand name — letter-assembly animation, hero-dominant */}
+        <div className="mb-8">
+          <h1 className="font-display text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-extrabold leading-[1.05] tracking-tight text-gradient glow-text">
+            <AssembledBrandText />
+          </h1>
+        </div>
 
-        {/* Headline */}
-        <motion.h1
+        {/* Tagline */}
+        <motion.p
           initial={{ opacity: 0, y: 28 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.75, delay: 0.12 }}
-          className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.08] mb-6 tracking-tight"
+          transition={{ duration: 0.75, delay: 0.8 }}
+          className="font-display text-2xl sm:text-3xl lg:text-4xl font-bold leading-[1.15] mb-4 tracking-tight"
         >
-          <span className="text-gradient glow-text">Innovative Energy</span>
-          <br />
-          <span className="text-foreground">&amp; Digital Solutions</span>
-        </motion.h1>
+          <span className="text-foreground">Innovative Energy &amp; Digital Solutions</span>
+        </motion.p>
 
         {/* Subheadline */}
         <motion.p
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.65, delay: 0.28 }}
+          transition={{ duration: 0.65, delay: 1.0 }}
           className="text-lg sm:text-xl text-muted-foreground max-w-xl mx-auto mb-12 leading-relaxed"
         >
           Smart energy systems and cutting-edge digital platforms for homes and businesses.
