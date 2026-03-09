@@ -24,18 +24,34 @@ interface BlogPost {
 const Blog = () => {
   const [posts, setPosts] = useState<BlogPost[]>([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
+    let cancelled = false;
+
     const fetchPosts = async () => {
-      const { data } = await supabase
-        .from("blog_posts")
-        .select("id, title, slug, excerpt, image_url, created_at")
-        .eq("published", true)
-        .order("created_at", { ascending: false });
-      setPosts(data ?? []);
-      setLoading(false);
+      try {
+        setError(null);
+        const { data, error } = await supabase
+          .from("blog_posts")
+          .select("id, title, slug, excerpt, image_url, created_at")
+          .eq("published", true)
+          .order("created_at", { ascending: false });
+
+        if (error) throw error;
+        if (!cancelled) setPosts(data ?? []);
+      } catch (e: any) {
+        if (!cancelled) setError(e?.message ?? "Failed to load blog posts.");
+      } finally {
+        if (!cancelled) setLoading(false);
+      }
     };
+
     fetchPosts();
+
+    return () => {
+      cancelled = true;
+    };
   }, []);
 
   return (
