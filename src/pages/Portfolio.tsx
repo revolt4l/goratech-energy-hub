@@ -14,41 +14,33 @@ import tremoHero from "@/assets/tremo-hero.jpg";
 import tremoSchedule from "@/assets/tremo-schedule.jpg";
 import tremoContact from "@/assets/tremo-contact.jpg";
 
-const energyDesigns = [
+const solarPackages = [
   {
-    title: "3kVA Home Backup System",
-    type: "Residential",
-    image: portfolio3kva,
-    description:
-      "Powers lights, fans, fridge, and TV — helping Nigerian homes reduce generator dependency and enjoy quiet, uninterrupted power.",
-    equipment: [
-      "3kVA Hybrid Inverter",
-      "2× 200Ah Tubular Batteries",
-      "6× 330W Monocrystalline Solar Panels",
+    title: "Tech Bro Solar Package",
+    price: "₦1,100,000",
+    system: "1–1.5kVA",
+    powers: "Laptop, desktop, fan, WiFi router, 3–4 bulbs",
+    components: [
+      "2× 550W Solar Panels",
+      "1× 1–1.5kVA Inverter",
+      "1× 200Ah Battery",
+      "Mounting & Wiring",
+      "Safety Protection",
+      "Full Installation",
     ],
   },
   {
-    title: "Small Office Energy Solution",
-    type: "Small Business",
-    image: portfolio5kva,
-    description:
-      "Designed for offices needing reliable power for computers, printers, networking equipment, and lighting throughout the workday.",
-    equipment: [
-      "5kVA Hybrid Inverter",
-      "4× 250Ah Lithium Batteries",
-      "10× 330W Monocrystalline Solar Panels",
-    ],
-  },
-  {
-    title: "Shop / Retail Energy Setup",
-    type: "Retail Shop",
-    image: portfolio10kva,
-    description:
-      "A compact, efficient design for shops powering lighting, POS systems, and refrigeration units reliably during business hours.",
-    equipment: [
-      "2kVA Hybrid Inverter",
-      "2× 150Ah Tubular Batteries",
-      "4× 250W Monocrystalline Solar Panels",
+    title: "Civil Servant Solar Package",
+    price: "₦1,900,000",
+    system: "3kVA",
+    powers: "Fridge, TV, fan, 4–6 bulbs",
+    components: [
+      "4× 550W Solar Panels",
+      "1× 3kVA Inverter",
+      "2× 220Ah Batteries",
+      "Mounting & Wiring",
+      "Safety Protection",
+      "Full Installation",
     ],
   },
 ];
