@@ -1,4 +1,4 @@
-import { Battery, Sun, Zap, ArrowRight, Globe, Bot, BookOpen, ExternalLink, Church } from "lucide-react";
+import { Sun, Zap, ArrowRight, Globe, Bot, BookOpen, ExternalLink, Church, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -7,48 +7,37 @@ import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import { motion } from "framer-motion";
 
-import portfolio3kva from "@/assets/portfolio-3kva.jpg";
-import portfolio5kva from "@/assets/portfolio-5kva.jpg";
-import portfolio10kva from "@/assets/portfolio-10kva.jpg";
 import tremoHero from "@/assets/tremo-hero.jpg";
 import tremoSchedule from "@/assets/tremo-schedule.jpg";
 import tremoContact from "@/assets/tremo-contact.jpg";
 
-const energyDesigns = [
+const solarPackages = [
   {
-    title: "3kVA Home Backup System",
-    type: "Residential",
-    image: portfolio3kva,
-    description:
-      "Powers lights, fans, fridge, and TV — helping Nigerian homes reduce generator dependency and enjoy quiet, uninterrupted power.",
-    equipment: [
-      "3kVA Hybrid Inverter",
-      "2× 200Ah Tubular Batteries",
-      "6× 330W Monocrystalline Solar Panels",
+    title: "Tech Bro Solar Package",
+    price: "₦1,100,000",
+    system: "1–1.5kVA",
+    powers: "Laptop, desktop, fan, WiFi router, 3–4 bulbs",
+    components: [
+      "2× 550W Solar Panels",
+      "1× 1–1.5kVA Inverter",
+      "1× 200Ah Battery",
+      "Mounting & Wiring",
+      "Safety Protection",
+      "Full Installation",
     ],
   },
   {
-    title: "Small Office Energy Solution",
-    type: "Small Business",
-    image: portfolio5kva,
-    description:
-      "Designed for offices needing reliable power for computers, printers, networking equipment, and lighting throughout the workday.",
-    equipment: [
-      "5kVA Hybrid Inverter",
-      "4× 250Ah Lithium Batteries",
-      "10× 330W Monocrystalline Solar Panels",
-    ],
-  },
-  {
-    title: "Shop / Retail Energy Setup",
-    type: "Retail Shop",
-    image: portfolio10kva,
-    description:
-      "A compact, efficient design for shops powering lighting, POS systems, and refrigeration units reliably during business hours.",
-    equipment: [
-      "2kVA Hybrid Inverter",
-      "2× 150Ah Tubular Batteries",
-      "4× 250W Monocrystalline Solar Panels",
+    title: "Civil Servant Solar Package",
+    price: "₦1,900,000",
+    system: "3kVA",
+    powers: "Fridge, TV, fan, 4–6 bulbs",
+    components: [
+      "4× 550W Solar Panels",
+      "1× 3kVA Inverter",
+      "2× 220Ah Batteries",
+      "Mounting & Wiring",
+      "Safety Protection",
+      "Full Installation",
     ],
   },
 ];
@@ -111,46 +100,44 @@ const Portfolio = () => {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="font-display text-2xl sm:text-3xl font-bold mb-8 text-center"
           >
-            Example Energy System <span className="text-gradient">Designs</span>
+            Solar <span className="text-gradient">Packages</span>
           </motion.h2>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto mb-20">
-            {energyDesigns.map((item, i) => (
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-20">
+            {solarPackages.map((pkg, i) => (
               <motion.div
-                key={item.title}
+                key={pkg.title}
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: i * 0.15 }}
               >
-                <Card className="h-full flex flex-col bg-card border-border overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
-                  <a href="https://wa.me/2348059712276" target="_blank" rel="noopener noreferrer" className="block aspect-video overflow-hidden border-2 border-border rounded-t-lg group/img">
-                    <img src={item.image} alt={item.title} className="w-full h-full object-cover transition-transform duration-300 group-hover/img:scale-105" loading="lazy" />
-                  </a>
-                  <CardHeader className="pb-3">
-                    <div className="flex items-center justify-between mb-2">
-                      <CardTitle className="text-xl">{item.title}</CardTitle>
-                      <Badge variant="secondary" className="text-xs shrink-0">{item.type}</Badge>
-                    </div>
-                    <p className="text-sm text-muted-foreground">{item.description}</p>
+                <Card className="h-full flex flex-col bg-card border-border overflow-hidden shadow-md hover:shadow-xl hover:border-primary/30 transition-all duration-300">
+                  <CardHeader className="pb-3 text-center">
+                    <Badge variant="secondary" className="text-xs self-center mb-3">{pkg.system} System</Badge>
+                    <CardTitle className="text-xl mb-1">{pkg.title}</CardTitle>
+                    <p className="text-3xl font-bold text-primary mt-2">{pkg.price}</p>
                   </CardHeader>
-                  <CardContent className="flex-1">
-                    <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-3">Equipment</p>
-                    <ul className="space-y-2">
-                      {item.equipment.map((eq) => {
-                        const Icon = eq.toLowerCase().includes("batter") ? Battery : eq.toLowerCase().includes("panel") ? Sun : Zap;
-                        return (
-                          <li key={eq} className="flex items-start gap-2 text-sm text-foreground">
-                            <Icon className="h-4 w-4 text-primary mt-0.5 shrink-0" />
-                            {eq}
+                  <CardContent className="flex-1 space-y-4">
+                    <div>
+                      <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-2">Powers</p>
+                      <p className="text-sm text-foreground">{pkg.powers}</p>
+                    </div>
+                    <div>
+                      <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-3">What's Included</p>
+                      <ul className="space-y-2">
+                        {pkg.components.map((comp) => (
+                          <li key={comp} className="flex items-start gap-2 text-sm text-foreground">
+                            <Check className="h-4 w-4 text-primary mt-0.5 shrink-0" />
+                            {comp}
                           </li>
-                        );
-                      })}
-                    </ul>
+                        ))}
+                      </ul>
+                    </div>
                   </CardContent>
                   <CardFooter>
                     <Button className="w-full gap-2" asChild>
                       <a href="https://wa.me/2348059712276" target="_blank" rel="noopener noreferrer">
-                        Get a Custom Quote
+                        Request Installation
                         <ArrowRight className="h-4 w-4" />
                       </a>
                     </Button>
