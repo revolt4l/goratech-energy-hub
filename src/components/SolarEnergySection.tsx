@@ -1,6 +1,8 @@
-import { Sun, Battery, Zap, Activity } from "lucide-react";
+import { Sun, Battery, Zap, Activity, Check } from "lucide-react";
 import { motion, useAnimationFrame } from "framer-motion";
 import { useRef, useState } from "react";
+import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
 
 const highlights = [
   { icon: Sun, label: "Solar Installations", desc: "Residential & commercial on-grid and off-grid systems." },
@@ -189,6 +191,111 @@ const SolarEnergySection = () => {
                   </div>
                 </motion.div>
               ))}
+            </div>
+
+            {/* Solar Package Cards */}
+            <div className="grid md:grid-cols-2 gap-4 mt-6">
+              {/* Tech Bro Package */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-40px" }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                whileHover={{ y: -8, transition: { duration: 0.2 } }}
+                className="rounded-2xl border-2 border-yellow-500/30 p-6 flex flex-col gap-4 card-shadow group cursor-default transition-all duration-300 hover:border-yellow-500/60"
+                style={{ background: "linear-gradient(135deg, hsl(45 95% 15%) 0%, hsl(28 95% 10%) 100%)" }}
+              >
+                <div className="flex items-center justify-between">
+                  <div
+                    className="w-12 h-12 rounded-xl flex items-center justify-center"
+                    style={{ background: "hsl(43 95% 56% / 0.15)" }}
+                  >
+                    <span className="text-2xl">💻</span>
+                  </div>
+                  <span
+                    className="text-xl font-bold"
+                    style={{ color: "hsl(43 95% 56%)" }}
+                  >
+                    ₦1,100,000
+                  </span>
+                </div>
+                <div>
+                  <h3 className="font-display text-lg font-bold text-foreground mb-1">Tech Bro Solar Package</h3>
+                  <p className="text-xs text-muted-foreground mb-3">1–1.5kVA System</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed mb-3">
+                    Powers: laptop, desktop, fan, WiFi router, 3–4 bulbs
+                  </p>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    <span className="text-lg">💻</span>
+                    <span className="text-lg">🖥</span>
+                    <span className="text-lg">🗊</span>
+                    <span className="text-lg">💡</span>
+                  </div>
+                </div>
+                <Button
+                  size="sm"
+                  className="w-full gap-2 text-sm font-semibold rounded-xl"
+                  style={{
+                    background: "linear-gradient(135deg, hsl(43 95% 56%), hsl(28 95% 60%))",
+                    color: "hsl(224 40% 5%)",
+                  }}
+                  onClick={() => window.open("https://wa.me/2348059712276?text=I'm%20interested%20in%20the%20Tech%20Bro%20Solar%20Package%20(%E2%82%A61,100,000)", "_blank")}
+                >
+                  Request Installation
+                  <ArrowRight className="h-4 w-4" />
+                </Button>
+              </motion.div>
+
+              {/* Civil Servant Package */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-40px" }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                whileHover={{ y: -8, transition: { duration: 0.2 } }}
+                className="rounded-2xl border-2 border-yellow-500/30 p-6 flex flex-col gap-4 card-shadow group cursor-default transition-all duration-300 hover:border-yellow-500/60"
+                style={{ background: "linear-gradient(135deg, hsl(45 95% 15%) 0%, hsl(28 95% 10%) 100%)" }}
+              >
+                <div className="flex items-center justify-between">
+                  <div
+                    className="w-12 h-12 rounded-xl flex items-center justify-center"
+                    style={{ background: "hsl(43 95% 56% / 0.15)" }}
+                  >
+                    <span className="text-2xl">🏠</span>
+                  </div>
+                  <span
+                    className="text-xl font-bold"
+                    style={{ color: "hsl(43 95% 56%)" }}
+                  >
+                    ₦1,900,000
+                  </span>
+                </div>
+                <div>
+                  <h3 className="font-display text-lg font-bold text-foreground mb-1">Civil Servant Solar Package</h3>
+                  <p className="text-xs text-muted-foreground mb-3">3kVA System</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed mb-3">
+                    Powers: fridge, TV, fan, 4–6 bulbs
+                  </p>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    <span className="text-lg">🧊</span>
+                    <span className="text-lg">📺</span>
+                    <span className="text-lg">🗊</span>
+                    <span className="text-lg">💡</span>
+                  </div>
+                </div>
+                <Button
+                  size="sm"
+                  className="w-full gap-2 text-sm font-semibold rounded-xl"
+                  style={{
+                    background: "linear-gradient(135deg, hsl(43 95% 56%), hsl(28 95% 60%))",
+                    color: "hsl(224 40% 5%)",
+                  }}
+                  onClick={() => window.open("https://wa.me/2348059712276?text=I'm%20interested%20in%20the%20Civil%20Servant%20Solar%20Package%20(%E2%82%A61,900,000)", "_blank")}
+                >
+                  Request Installation
+                  <ArrowRight className="h-4 w-4" />
+                </Button>
+              </motion.div>
             </div>
           </motion.div>
         </div>
