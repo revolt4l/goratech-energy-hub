@@ -1,6 +1,8 @@
-import { Sun, Battery, Zap, Activity } from "lucide-react";
+import { Sun, Battery, Zap, Activity, Check } from "lucide-react";
 import { motion, useAnimationFrame } from "framer-motion";
 import { useRef, useState } from "react";
+import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
 
 const highlights = [
   { icon: Sun, label: "Solar Installations", desc: "Residential & commercial on-grid and off-grid systems." },
