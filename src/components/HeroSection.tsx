@@ -2,6 +2,7 @@ import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import AnimatedSun from "./AnimatedSun";
 
 const BRAND_TEXT = "GORATECH POWER HUB";
 
@@ -115,6 +116,16 @@ const HeroSection = () => {
       />
 
       <div className="relative z-10 container mx-auto px-4 sm:px-6 text-center max-w-6xl">
+        {/* Spinning sun */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="flex justify-center mb-6"
+        >
+          <AnimatedSun />
+        </motion.div>
+
         {/* Brand name — letter-assembly animation, hero-dominant */}
         <div className="mb-6">
           <h1
