@@ -126,7 +126,7 @@ const SolarEnergySection = () => {
                     className="w-12 h-12 rounded-xl flex items-center justify-center"
                     style={{ background: "hsl(43 95% 56% / 0.15)" }}
                   >
-                    <span className="text-2xl">💻</span>
+                    <Sun className="h-6 w-6 text-yellow-400" />
                   </div>
                   <span
                     className="text-xl font-bold"
@@ -141,12 +141,6 @@ const SolarEnergySection = () => {
                   <p className="text-sm text-muted-foreground leading-relaxed mb-3">
                     Powers: laptop, desktop, fan, WiFi router, 3–4 bulbs
                   </p>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    <span className="text-lg">💻</span>
-                    <span className="text-lg">🖥</span>
-                    <span className="text-lg">🗊</span>
-                    <span className="text-lg">💡</span>
-                  </div>
                 </div>
                 <Button
                   size="sm"
@@ -177,7 +171,7 @@ const SolarEnergySection = () => {
                     className="w-12 h-12 rounded-xl flex items-center justify-center"
                     style={{ background: "hsl(43 95% 56% / 0.15)" }}
                   >
-                    <span className="text-2xl">🏠</span>
+                    <Sun className="h-6 w-6 text-yellow-400" />
                   </div>
                   <span
                     className="text-xl font-bold"
@@ -192,12 +186,6 @@ const SolarEnergySection = () => {
                   <p className="text-sm text-muted-foreground leading-relaxed mb-3">
                     Powers: fridge, TV, fan, 4–6 bulbs
                   </p>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    <span className="text-lg">🧊</span>
-                    <span className="text-lg">📺</span>
-                    <span className="text-lg">🗊</span>
-                    <span className="text-lg">💡</span>
-                  </div>
                 </div>
                 <Button
                   size="sm"
