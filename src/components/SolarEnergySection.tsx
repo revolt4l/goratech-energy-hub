@@ -1,7 +1,6 @@
-import { Sun, Battery, Zap, Activity, Check } from "lucide-react";
+import { Sun, Battery, Zap, Activity } from "lucide-react";
 import { motion } from "framer-motion";
 import { useRef } from "react";
-import AnimatedSun from "./AnimatedSun";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
@@ -84,14 +83,6 @@ const SolarEnergySection = () => {
             transition={{ duration: 0.65, delay: 0.1 }}
             className="flex flex-col gap-6"
           >
-            {/* Animated sun visual */}
-            <div
-              className="rounded-2xl border border-orange-400/15 flex items-center justify-center py-6 relative overflow-hidden"
-              style={{ background: "hsl(28 95% 60% / 0.04)" }}
-            >
-              <AnimatedSun />
-            </div>
-
             {/* Cards grid */}
             <div className="grid grid-cols-2 gap-4">
               {highlights.map((item, i) => (
