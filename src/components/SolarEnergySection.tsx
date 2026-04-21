@@ -130,15 +130,15 @@ const SolarEnergySection = () => {
                   </div>
                   <span
                     className="text-xl font-bold"
-                    style={{ color: "hsl(43 95% 56%)" }}
+                    style={{ color: "hsl(48 100% 75%)" }}
                   >
                     ₦1,100,000
                   </span>
                 </div>
                 <div>
-                  <h3 className="font-display text-lg font-bold text-foreground mb-1">Tech Bro Solar Package</h3>
-                  <p className="text-xs text-muted-foreground mb-3">1–1.5kVA System</p>
-                  <p className="text-sm text-muted-foreground leading-relaxed mb-3">
+                  <h3 className="font-display text-lg font-bold mb-1" style={{ color: "hsl(48 100% 92%)" }}>Tech Bro Solar Package</h3>
+                  <p className="text-xs mb-3" style={{ color: "hsl(48 60% 80%)" }}>1–1.5kVA System</p>
+                  <p className="text-sm leading-relaxed mb-3" style={{ color: "hsl(48 40% 88%)" }}>
                     Powers: laptop, desktop, fan, WiFi router, 3–4 bulbs
                   </p>
                 </div>
@@ -175,15 +175,15 @@ const SolarEnergySection = () => {
                   </div>
                   <span
                     className="text-xl font-bold"
-                    style={{ color: "hsl(43 95% 56%)" }}
+                    style={{ color: "hsl(48 100% 75%)" }}
                   >
                     ₦1,900,000
                   </span>
                 </div>
                 <div>
-                  <h3 className="font-display text-lg font-bold text-foreground mb-1">Civil Servant Solar Package</h3>
-                  <p className="text-xs text-muted-foreground mb-3">3kVA System</p>
-                  <p className="text-sm text-muted-foreground leading-relaxed mb-3">
+                  <h3 className="font-display text-lg font-bold mb-1" style={{ color: "hsl(48 100% 92%)" }}>Civil Servant Solar Package</h3>
+                  <p className="text-xs mb-3" style={{ color: "hsl(48 60% 80%)" }}>3kVA System</p>
+                  <p className="text-sm leading-relaxed mb-3" style={{ color: "hsl(48 40% 88%)" }}>
                     Powers: fridge, TV, fan, 4–6 bulbs
                   </p>
                 </div>
